@@ -17,9 +17,16 @@ prepare the app widget preview).
 
 Tested on Android 10 and 13 (API 33).
 
-## Install
+## Install & Settings
 
 For the moment use the APK in the [latest GitHub Release](https://github.com/lrq3000/PolyCalX/releases/latest).
+
+After you place the widget on your homescreen, make sure to tap on it to open the settings, and then tap on "Calendar Permission"
+to allow the widget to access your calendar. Otherwise, by default, it shows fake data as an example.
+
+You can also select which calendars you want to show (each in a different color - use another app such as Etar to modify the colors).
+
+The date/time format can also be changed.
 
 ## License
 
