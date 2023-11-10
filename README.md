@@ -51,5 +51,5 @@ This is a fork of the awesome [PolyCal](https://github.com/jasongyorog/PolyCal).
 
 ## Similar projects
 
-* [Todo Agenda](https://github.com/andstatus/todoagenda) widget for Android - if you prefer to distinctively separate events per day, this is the widget you need.
+* [Todo Agenda](https://github.com/andstatus/todoagenda) widget for Android - Highly configurable calendar widget, if you prefer to cluster events per day, this is the widget you need.
 * [MinCal](https://github.com/mvmike/min-cal-widget) widget for Android - a concise monthly calendar, no title, only events counts are displayed.
