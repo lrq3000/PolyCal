@@ -7,11 +7,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Binder;
 import android.os.Bundle;
 import android.provider.CalendarContract;
+import android.text.SpannableString;
 import android.text.TextUtils;
+import android.text.style.StyleSpan;
 import android.util.Log;
 import android.util.TypedValue;
 import android.widget.AdapterView;
@@ -84,6 +87,9 @@ public class CalendarRemoteViewsFactory implements RemoteViewsService.RemoteView
         return mCursor == null ? 0 : mCursor.getCount();
     }
 
+    /**
+     * A class that describes a view hierarchy that can be displayed in another process. The hierarchy is inflated from a layout resource file, and this class provides some basic operations for modifying the content of the inflated hierarchy.
+     */
     @Override
     public RemoteViews getViewAt(int position) {
         Log.d(TAG, "RemoteViews getViewAt(" + position + ")");
@@ -114,7 +120,17 @@ public class CalendarRemoteViewsFactory implements RemoteViewsService.RemoteView
 
         int other_color = Color.LTGRAY;
 
-        rv.setTextViewText(R.id.event_time, formatter.format(StartDate) );
+        String formattedDate = formatter.format(StartDate);
+        long eventBeginTime = mCursor.getLong(EVENT_INDEX_BEGIN);
+        if (isEventToday(eventBeginTime)) {
+            // If the event is today, display the date/time in bold
+            SpannableString spanString = new SpannableString(formattedDate);
+            spanString.setSpan(new StyleSpan(Typeface.BOLD), 0, spanString.length(), 0);
+            rv.setTextViewText(R.id.event_time, spanString);
+        } else {
+            // Else, if the event is any other day than today, just display it without bold
+            rv.setTextViewText(R.id.event_time, formattedDate );
+        }
         rv.setTextColor(R.id.event_time, other_color);
         rv.setTextViewTextSize(R.id.event_time, TypedValue.COMPLEX_UNIT_SP, text_size);
 
@@ -137,6 +153,20 @@ public class CalendarRemoteViewsFactory implements RemoteViewsService.RemoteView
         rv.setTextViewTextSize(R.id.event_location, TypedValue.COMPLEX_UNIT_SP, text_size);
 
         return rv;
+    }
+
+    private boolean isEventToday(long eventBeginTime) {
+        Calendar today = Calendar.getInstance();
+        today.set(Calendar.HOUR_OF_DAY, 0);
+        today.set(Calendar.MINUTE, 0);
+        today.set(Calendar.SECOND, 0);
+        today.set(Calendar.MILLISECOND, 0);
+    
+        Calendar eventDate = Calendar.getInstance();
+        eventDate.setTimeInMillis(eventBeginTime);
+    
+        return today.get(Calendar.YEAR) == eventDate.get(Calendar.YEAR) &&
+               today.get(Calendar.DAY_OF_YEAR) == eventDate.get(Calendar.DAY_OF_YEAR);
     }
 
     @Override
