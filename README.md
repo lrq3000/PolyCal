@@ -1,9 +1,8 @@
-<p align="center">
-<img src="./imported_images/polycalx_icon_readme.png" title="" alt="" width="116">
+<p align="center"><img src="./imported_images/polycalx_icon_readme.png" title="" alt="" width="116"></p>
 <h1 align="center">PolyCalX</h1>
-<p align="center">A colorful, concise text-based calendar widget for Android.</p>
-
-[<img src="/.github/badge.png" alt="Get it on GitHub" height="80">](https://github.com/lrq3000/PolyCalX/releases/latest)
+<p align="center">
+  A colorful, concise text-based calendar widget for Android.
+  [<img src="/.github/badge.png" alt="Get it on GitHub" height="80">](https://github.com/lrq3000/PolyCalX/releases/latest)
 </p>
 
 <p align="middle">
