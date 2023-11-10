@@ -1,7 +1,11 @@
+<img src="./imported_images/polycalx_icon_readme.png" title="" alt="" width="115">
+
 PolyCalX
 -------
 
 A colorful, concise text-based calendar widget for Android.
+
+<img title="" src="./imported_images/PolyCalX_screenshot.png" alt="" width="285">
 
 The color coding is intended to be especially useful for people who must
 coordinate multiple calendars.
