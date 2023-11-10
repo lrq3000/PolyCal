@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="PolyCalTheme" parent="Theme.AppCompat.Light">
+    <style name="PolyCalXTheme" parent="Theme.AppCompat.Light">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 

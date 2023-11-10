@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
     defaultConfig {
-        applicationId "com.gyorog.polycal"
+        applicationId "org.lrq3000.polycalx"
         minSdkVersion 24
         compileSdk 33
         targetSdkVersion 31
-        versionCode 9
-        versionName "1.9"
+        versionCode 10
+        versionName "2.0"
     }
 
     buildTypes {
