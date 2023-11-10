@@ -49,4 +49,5 @@ This is a fork of the awesome [PolyCal](https://github.com/jasongyorog/PolyCal).
 
 ## Similar projects
 
+* [Todo Agenda](https://github.com/andstatus/todoagenda) widget for Android.
 * [MinCal](https://github.com/mvmike/min-cal-widget) widget for Android.
