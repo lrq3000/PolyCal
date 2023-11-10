@@ -15,6 +15,8 @@ to use the standard practices for each part. By default, it has no calendar
 permissions, and so it will be in "screenshot mode" (which was also used to
 prepare the app widget preview).
 
+Tested on Android 10 and 13 (API 33).
+
 ## Install
 
 For the moment use the APK in the GitHub Releases.
