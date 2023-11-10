@@ -1,5 +1,7 @@
 <img src="./imported_images/polycalx_icon_readme.png" title="" alt="" width="115">
-# PolyCalX
+
+PolyCalX
+--------
 
 A colorful, concise text-based calendar widget for Android.
 
