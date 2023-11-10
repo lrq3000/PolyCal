@@ -1,11 +1,16 @@
-<img src="./imported_images/polycalx_icon_readme.png" title="" alt="" width="115">
+<p align="middle">
+<img src="./imported_images/polycalx_icon_readme.png" title="" alt="" width="116">
 
 PolyCalX
 --------
+<bold>A colorful, concise text-based calendar widget for Android.</bold>
+</p>
 
-A colorful, concise text-based calendar widget for Android.
+[<img src="/.github/badge.png" alt="Get it on GitHub" height="80">](https://github.com/lrq3000/PolyCalX/releases/latest)
 
-<img title="" src="./imported_images/PolyCalX_screenshot.png" alt="" width="285">
+<p align="middle">
+<img title="" src="./imported_images/PolyCalX_screenshot.png" alt="" width="40%">
+</p>
 
 ## Description
 This is a widget for Android to display the calendar/agenda in a concise
@@ -30,7 +35,6 @@ prepare the app widget preview).
 Tested on Android 10 and 13 (API 33).
 
 ## Install & Settings
-
 For the moment use the APK in the [latest GitHub Release](https://github.com/lrq3000/PolyCalX/releases/latest).
 
 After you place the widget on your homescreen, make sure to tap on it to open the settings, and then tap on "Calendar Permission"
