@@ -1,7 +1,7 @@
 <p align="center">
 <img src="./imported_images/polycalx_icon_readme.png" title="" alt="" width="116">
 <h1 align="center">PolyCalX</h1>
-A colorful, concise text-based calendar widget for Android.
+<p align="center">A colorful, concise text-based calendar widget for Android.</p>
 </p>
 
 [<img src="/.github/badge.png" alt="Get it on GitHub" height="80">](https://github.com/lrq3000/PolyCalX/releases/latest)
