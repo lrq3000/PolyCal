@@ -1,4 +1,4 @@
-<p align="middle">
+<p align="center">
 <img src="./imported_images/polycalx_icon_readme.png" title="" alt="" width="116">
 <h1>PolyCalX</h1>
 <bold>A colorful, concise text-based calendar widget for Android.</bold>
