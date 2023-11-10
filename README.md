@@ -1,8 +1,6 @@
 <p align="middle">
 <img src="./imported_images/polycalx_icon_readme.png" title="" alt="" width="116">
-
-PolyCalX
---------
+<h1>PolyCalX</h1>
 <bold>A colorful, concise text-based calendar widget for Android.</bold>
 </p>
 
