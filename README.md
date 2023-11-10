@@ -2,7 +2,7 @@
 <h1 align="center">PolyCalX</h1>
 <p align="center">
   A colorful, concise text-based calendar widget for Android.
-  <a href="https://github.com/lrq3000/PolyCalX/releases/latest"><img src="/.github/badge.png" alt="Get it on GitHub" height="80" /></a>
+  <br /><a href="https://github.com/lrq3000/PolyCalX/releases/latest"><img src="/.github/badge.png" alt="Get it on GitHub" height="80" /></a>
 </p>
 
 <p align="middle">
