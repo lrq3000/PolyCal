@@ -1,5 +1,4 @@
 <img src="./imported_images/polycalx_icon_readme.png" title="" alt="" width="115">
-
 PolyCalX
 -------
 
@@ -19,7 +18,7 @@ Tested on Android 10 and 13 (API 33).
 
 ## Install
 
-For the moment use the APK in the GitHub Releases.
+For the moment use the APK in the [latest GitHub Release](https://github.com/lrq3000/PolyCalX/releases/latest).
 
 ## License
 
