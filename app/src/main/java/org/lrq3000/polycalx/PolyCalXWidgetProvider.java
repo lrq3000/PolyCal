@@ -88,6 +88,7 @@ public class PolyCalXWidgetProvider extends AppWidgetProvider {
 
     @Override
     public void onReceive(Context context, Intent intent){
+        Log.d(TAG, "onReceive() -> " + intent.toString() );
         if( intent.getAction() == RELOAD_EVENTS){
             AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
             int[] allWidgetIDs = appWidgetManager.getAppWidgetIds( new ComponentName(context, this.getClass()) );

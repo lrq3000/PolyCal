@@ -1,6 +1,7 @@
 package org.lrq3000.polycalx;
 
 import android.appwidget.AppWidgetManager;
+import android.app.PendingIntent;
 import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
@@ -111,12 +112,33 @@ public class CalendarRemoteViewsFactory implements RemoteViewsService.RemoteView
 
         RemoteViews rv = new RemoteViews(mContext.getPackageName(), R.layout.appwidget_item);
 
-        Bundle extras = new Bundle();
-        //extras.putLong(EVENT_ID, mCursor.getLong(EVENT_INDEX_EVENTID));
-        extras.putLong(EVENT_BEGIN, mCursor.getLong(EVENT_INDEX_BEGIN));
-        Intent fillInIntent = new Intent();
-        fillInIntent.putExtras(extras);
-        rv.setOnClickFillInIntent(R.id.item_layout, fillInIntent);
+        // What happens when tapping the widget?
+        // Retrieve the setting
+        SharedPreferences sharedPreferences = mContext.getSharedPreferences("org.lrq3000.polycalx.prefs_for_widget_" + widget_id, Context.MODE_PRIVATE);
+        boolean openSettingsOnTap = sharedPreferences.getBoolean("open_settings_on_tap", false);
+
+        // In any case we refresh the widget's view when the user taps
+        Intent intent = new Intent(mContext, PolyCalXWidgetProvider.class);
+        intent.setAction("org.lrq3000.polycalx.RELOAD_EVENTS");
+        intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, widget_id);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext, widget_id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        rv.setOnClickPendingIntent(R.id.item_layout, pendingIntent);
+
+        // Then we do another action depending on the setting
+        if (openSettingsOnTap) {
+            // Create an intent to open SettingsActivity
+            Intent settingsIntent = new Intent(mContext, SettingsActivity.class);
+            settingsIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, widget_id);
+            rv.setOnClickFillInIntent(R.id.item_layout, settingsIntent);
+        } else {
+            // Create an intent to launch the Agenda app
+            Bundle extras = new Bundle();
+            //extras.putLong(EVENT_ID, mCursor.getLong(EVENT_INDEX_EVENTID));
+            extras.putLong(EVENT_BEGIN, mCursor.getLong(EVENT_INDEX_BEGIN));
+            Intent fillInIntent = new Intent();
+            fillInIntent.putExtras(extras);
+            rv.setOnClickFillInIntent(R.id.item_layout, fillInIntent);
+        }
 
         int other_color = Color.LTGRAY;
 
